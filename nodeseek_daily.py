@@ -172,6 +172,8 @@ def nodeseek_comment(driver):
         
         # 过滤掉置顶帖
         valid_posts = [post for post in posts if not post.find_elements(By.CSS_SELECTOR, '.pined')]
+        # 去掉第一个
+        valid_posts = valid_posts[1:]
         selected_posts = random.sample(valid_posts, min(20, len(valid_posts)))
         
         # 存储已选择的帖子URL

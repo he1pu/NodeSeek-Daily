@@ -3,7 +3,8 @@ name: NodeSeek 自动签到评论加鸡腿
 on:
   push:
     branches:
-      - main
+      - non-existent-branch #取消
+      #- main
   schedule:
     - cron: '03 16 * * *'  # UTC 16:00，即北京时间 00:00
 
